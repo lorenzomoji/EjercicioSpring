@@ -4,6 +4,7 @@ import org.formacio.repositori.AgendaService;
 import org.formacio.repositori.Persona;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -26,4 +27,9 @@ public class AgendaController {
 		return agenda.recupera(id).getTelefon();
 	}
 	
+	@RequestMapping(path = "/contacto/{id}")
+	@ResponseBody
+	public Persona contacto(@PathVariable String id) {
+		return agenda.recupera(id);
+	}
 }

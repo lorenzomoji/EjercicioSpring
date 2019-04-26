@@ -56,7 +56,7 @@ public class PracticaSetmana2ApplicationTests {
 	 */
 	@Test
 	public void test_contacte() throws Exception {
-		mockMvc.perform(get("/contacte/lin").accept(MediaType.APPLICATION_JSON))
+		mockMvc.perform(get("/contacto/lin").accept(MediaType.APPLICATION_JSON))
 				.andExpect(status().isOk())
 				.andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8));
 	}
