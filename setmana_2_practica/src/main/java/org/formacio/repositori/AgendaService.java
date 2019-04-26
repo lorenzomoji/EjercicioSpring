@@ -19,8 +19,12 @@ public class AgendaService {
 		bbdd.put("lin", new Persona("lin","Lina","971-555888"));
 	}
 	
-	public void inserta (String id, String nom, String telefon) {
-		bbdd.put(id, new Persona(id, nom, telefon));
+	public void inserta (String id, String nom, String telefono) {
+		bbdd.put(id, new Persona(id, nom, telefono));
+	}
+	
+	public String telefono (String telefono) {
+		return bbdd.get(telefono).toString();
 	}
 	
 	public Persona recupera (String id) {

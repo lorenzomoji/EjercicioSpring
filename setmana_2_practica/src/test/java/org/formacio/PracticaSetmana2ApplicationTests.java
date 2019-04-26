@@ -38,12 +38,12 @@ public class PracticaSetmana2ApplicationTests {
 	}
 
 	/**
-	 * A la peticio /telefon?id=xx
+	 * A la peticio /telefono?id=xx
 	 *  ha de respondre amb el telefon del contacte amb id passat com a paràmetre (xx)
 	 */
 	@Test
-	public void test_obte_telefon() throws Exception {
-		mockMvc.perform(get("/telefon?id=lin"))
+	public void test_obte_telefono() throws Exception {
+		mockMvc.perform(get("/telefono?id=lin"))
 				.andExpect(status().isOk())
 				.andExpect(content().string("971-555888"));
 	}
