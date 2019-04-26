@@ -100,7 +100,7 @@ public class PracticaSetmana2ApplicationTests {
 	 */
 	@Test
 	public void test_nou_contacte() throws Exception {
-		mockMvc.perform(post("/afegir")
+		mockMvc.perform(post("/añadir")
 				           .param("id", "jos")
 				           .param("nom", "Josep")
 				           .param("telefon", "971-555326")

@@ -46,6 +46,12 @@ public class AgendaController {
 	public String error(ArithmeticException e) {
 		return "Ha habido un error";
 	}
+	
+	@RequestMapping(path = "/añadir")
+	@ResponseBody
+	public void añadir(String id, String nombre, String telefono) {
+		agenda.inserta(id, nombre, telefono);
+	}
 }
 
 
