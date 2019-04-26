@@ -32,7 +32,7 @@ public class PracticaSetmana2ApplicationTests {
 	 */
 	@Test
 	public void test_obte_nombre_contactes() throws Exception {
-		mockMvc.perform(get("/nombre"))
+		mockMvc.perform(get("/numero"))
 				.andExpect(status().isOk())
 				.andExpect(content().string("3"));
 	}
